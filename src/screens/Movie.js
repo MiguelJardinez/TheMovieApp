@@ -12,7 +12,8 @@ const Movie = () => {
   const data = useRoute();
   const { id } = data.params;
   const movie = useGetMovieById(id);
-  console.log(movie);
+
+  console.log(data);
 
   const { poster_path, overview, release_date } = movie;
   

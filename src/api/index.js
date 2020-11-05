@@ -6,4 +6,12 @@ import useGetMovieById from './useGetMovieById';
 import useTrailerMovieApi from './useTrailerMovieApi';
 import useGetPopularMovieApi from './useGetPopularMovieApi';
 
-export { useNowMovies, useGenreMovieApi, useGenres, useGetGenreIdApi, useGetMovieById, useTrailerMovieApi, useGetPopularMovieApi } 
+export { 
+  useNowMovies, 
+  useGenreMovieApi, 
+  useGenres, 
+  useGetGenreIdApi, 
+  useGetMovieById, 
+  useTrailerMovieApi, 
+  useGetPopularMovieApi 
+} 

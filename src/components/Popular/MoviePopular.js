@@ -8,7 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const MoviePopular = (props) => {
   
-  const { poster_path, title, release_date, vote_count, vote_average } = props.item;
+  const { poster_path, title, release_date, vote_count, vote_average, id } = props.item;
   const navigation = useNavigation();
   
   function imagenDefault() {
@@ -20,13 +20,13 @@ const MoviePopular = (props) => {
     }
   }
   return (
-    <TouchableWithoutFeedback onPress={ () => navigation.navigate('movie')} >
+    <TouchableWithoutFeedback onPress={ () => navigation.navigate('movies', { id })} >
       <View style={ styles.movieView }>
         <View style={ styles.left }>
           <Image 
             style={ styles.image } 
             source={ imagenDefault() } 
-            />
+          />
         </View>
         <View>
           <Title style={{ width: '80%' }}> {title} </Title>

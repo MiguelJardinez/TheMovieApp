@@ -9,7 +9,7 @@ import CarouselVertical from '../components/CarouselVertical';
 
 const Home = () => {
   
-  const data = useNowMovies();
+  const { data } = useNowMovies();
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>

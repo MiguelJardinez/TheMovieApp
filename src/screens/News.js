@@ -1,12 +1,21 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
-import { Paragraph } from 'react-native-paper';
+import React, { useState } from 'react'
+import { StyleSheet, FlatList, View } from 'react-native';
+import { useNowMovies } from '../api';
+import { MoviePopular } from '../components';
+
 
 const News = () => {
+  const [page, setPage] = useState(2)
+
+  const { data ,allMovies } = useNowMovies(page);
+
   return (
-    <View>
-      <Paragraph>Estamos desde news</Paragraph>
-    </View>
+    <FlatList 
+      data={ allMovies }
+      renderItem={ (movie) => <MoviePopular {...movie}/> }
+      keyExtractor={(movie, index) => index}
+      onEndReached={() => setPage(page +1)}
+    />
   )
 }
 

@@ -1,13 +1,10 @@
 import React, {useState} from 'react'
-import { StyleSheet, ScrollView, View, Dimensions, FlatList } from 'react-native';
-import { Button } from 'react-native-paper';
+import { StyleSheet, FlatList } from 'react-native';
 import { useGetPopularMovieApi  } from '../api';
 import { MoviePopular } from '../components';
-import usePreferences from '../hooks/usePreferences'
 
 const Popula = () => {
-  const [ page, setPage ] = useState(1)
-  const { theme } =usePreferences();
+  const [ page, setPage ] = useState(3)
   const { popular, allMovies } = useGetPopularMovieApi(page);
   
   return (
