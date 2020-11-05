@@ -3,8 +3,6 @@ import { API_HOST, API_KEY, LANG } from '../utils/constants';
 
 const useGenreMovieApi = ( idGenre ) => {
   const [ genre, setGenre ] = useState([]);
-
-  // console.log(idGenre); 
   
   useEffect( () => {
     const getGenre = async () => {

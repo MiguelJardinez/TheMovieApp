@@ -74,6 +74,7 @@ const StackNavigaton = ({ navigation }) => {
         options={{
           title: "",
           headerLeft: () => buttonLeft('search'),
+          headerTransparent: true
         }}
       />
 

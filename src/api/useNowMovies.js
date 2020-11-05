@@ -16,8 +16,6 @@ const useNowMovies = ( page = 1) => {
     getMovies();
   }, [page])
 
-  console.log(allMovies)
-
   return {data, allMovies};
 }
 

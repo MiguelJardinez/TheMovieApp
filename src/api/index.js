@@ -5,6 +5,7 @@ import useGetGenreIdApi from './useGetGenreIdApi';
 import useGetMovieById from './useGetMovieById';
 import useTrailerMovieApi from './useTrailerMovieApi';
 import useGetPopularMovieApi from './useGetPopularMovieApi';
+import useSearchMovieApi from './useSearchMovieApi';
 
 export { 
   useNowMovies, 
@@ -13,5 +14,6 @@ export {
   useGetGenreIdApi, 
   useGetMovieById, 
   useTrailerMovieApi, 
-  useGetPopularMovieApi 
+  useGetPopularMovieApi,
+  useSearchMovieApi 
 } 
